@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
     // 1. 속성
-    List<Lv4MenuItem> menuItems = new ArrayList<>();
-    List<Lv4Menu> lv4Menus = new ArrayList<>();
+    private List<Lv4MenuItem> menuItems = new ArrayList<>();
+    private List<Lv4Menu> lv4Menus = new ArrayList<>();
     private String name;
 
     // 2. 생성자
@@ -41,6 +41,11 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
         return name;
     }
 
+    public List<Lv4MenuItem> getMenuItems() {
+        return menuItems;
+    }
 
-
+    public List<Lv4Menu> getLv4Menus() {
+        return lv4Menus;
+    }
 }

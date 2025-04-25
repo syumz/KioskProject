@@ -2,9 +2,9 @@ package Lv4;
 
 public class Lv4MenuItem {
     // 1. 속성
-    String name;
-    double price;
-    String foodDetails;
+    private String name;
+    private double price;
+    private String foodDetails;
 
     // 2. 생성자
     public Lv4MenuItem(String name, double price, String foodDetails){

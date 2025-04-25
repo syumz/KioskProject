@@ -30,16 +30,16 @@ public class Lv4Kiosk {
                 num2 = scanner.nextInt();
 
                 if (num2 == 1) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getMenuItems().get(0));
+                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(0));
                     break;
                 } else if (num2 == 2) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getMenuItems().get(1));
+                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(1));
                     break;
                 } else if (num2 == 3) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getMenuItems().get(2));
+                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(2));
                     break;
                 } else if (num2 == 4) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getMenuItems().get(3));
+                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(3));
                     break;
                 } else if (num2 == 0) {
                     System.out.println("\n");

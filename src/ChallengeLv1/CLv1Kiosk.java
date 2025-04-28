@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class CLv1Kiosk {
     CLv1Menu cLv1Menu;
+    CLv1Cart cLv1Cart = new CLv1Cart();
 
 
     // 2. 생성자
@@ -21,9 +22,13 @@ public class CLv1Kiosk {
             int num2 = 0;
             System.out.println("\n");
             cLv1Menu.mainMenu();
+            if (!cLv1Cart.getCarts().isEmpty()) {
+                System.out.println("\n");
+                cLv1Cart.orderMenu();
+            }
             System.out.print("원하시는 메뉴를 선택해주세요: ");
             num1 = scanner.nextInt();
-            while (num1 != 0 && num1 != 1 && num1 != 2 && num1 != 3) {
+            while (num1 != 0 && num1 != 1 && num1 != 2 && num1 != 3 && num1 != 4 && num1 != 5) {
                 System.out.print("올바른 숫자를 입력해주세요.");
                 System.out.println("\n");
                 System.out.print("원하시는 메뉴를 선택해주세요: ");
@@ -40,7 +45,9 @@ public class CLv1Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + cLv1Menu.getBurgersMenu().get(num2 - 1));
-                        return;
+                        cLv1Cart.getCarts().add(cLv1Menu.getBurgersMenu().get(num2 - 1));
+                        cLv1Cart.cartsAdd();
+                        break;
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }
@@ -53,7 +60,9 @@ public class CLv1Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + cLv1Menu.getDrinksMenu().get(num2 - 1));
-                        return;
+                        cLv1Cart.getCarts().add(cLv1Menu.getDrinksMenu().get(num2 - 1));
+                        cLv1Cart.cartsAdd();
+                        break;
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }
@@ -66,10 +75,17 @@ public class CLv1Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + cLv1Menu.getDessertsMenu().get(num2 - 1));
-                        return;
+                        cLv1Cart.getCarts().add(cLv1Menu.getDessertsMenu().get(num2 - 1));
+                        cLv1Cart.cartsAdd();
+                        break;
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }
+                } else if (num1 == 4) {
+                    cLv1Cart.orders();
+                    break;
+                } else if (num1 == 5) {
+                    cLv1Cart.cancel();
                 }
             }
         }

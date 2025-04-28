@@ -20,7 +20,6 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
     }
 
     // 3. 기능(메서드)
-
     public void burgersMenu(){
         System.out.println("[ BURGERS MENU ]");
         for (int i = 0; i < burgersMenu.size(); i++) {

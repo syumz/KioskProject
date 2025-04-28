@@ -7,7 +7,7 @@ public class Lv4Kiosk {
 
 
     // 2. 생성자
-    public Lv4Kiosk(Lv4Menu lv4Menu){
+    public Lv4Kiosk(Lv4Menu lv4Menu) {
         this.lv4Menu = lv4Menu;
     }
 
@@ -16,42 +16,63 @@ public class Lv4Kiosk {
 
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("\n");
-        lv4Menu.mainMenu();
-        System.out.print("원하시는 메뉴를 선택해주세요: ");
-        int num1 = scanner.nextInt();
-        int num2;
-
-        while(true) {
-            if (num1 == 1) {
+        while (true) {
+            int num1 = 0;
+            int num2 = 0;
+            System.out.println("\n");
+            lv4Menu.mainMenu();
+            System.out.print("원하시는 메뉴를 선택해주세요: ");
+            num1 = scanner.nextInt();
+            while(num1!=0&&num1!=1&&num1!=2&&num1!=3){
+                System.out.print("올바른 숫자를 입력해주세요.");
                 System.out.println("\n");
-                lv4Menu.burgersMenu();
                 System.out.print("원하시는 메뉴를 선택해주세요: ");
-                num2 = scanner.nextInt();
+                num1 = scanner.nextInt();
+            }
+            if (num1 == 0) break; //종료
 
-                if (num2 == 1) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(0));
-                    break;
-                } else if (num2 == 2) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(1));
-                    break;
-                } else if (num2 == 3) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(2));
-                    break;
-                } else if (num2 == 4) {
-                    System.out.print("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(3));
-                    break;
-                } else if (num2 == 0) {
+            while (true) {
+                if (num1 == 1) {
                     System.out.println("\n");
-                    lv4Menu.mainMenu();
-                    System.out.print("원하시는 메뉴를 선택해주세요: ");
-                    num1 = scanner.nextInt();
+                    lv4Menu.burgersMenu();
+                    try {
+                        System.out.print("원하시는 메뉴를 선택해주세요: ");
+                        num2 = scanner.nextInt();
+                        if (num2 == 0) break;
+                        System.out.println("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(num2 - 1));
+                        return;
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("올바른 숫자를 입력해주세요");
+                    }
+
+                } else if (num1 == 2) {
+                    System.out.println("\n");
+                    lv4Menu.drinkMenu();
+                    try {
+                        System.out.print("원하시는 메뉴를 선택해주세요: ");
+                        num2 = scanner.nextInt();
+                        if (num2 == 0) break;
+                        System.out.println("선택한 메뉴: " + lv4Menu.getDrinksMenu().get(num2 - 1));
+                        return;
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("올바른 숫자를 입력해주세요");
+                    }
+
+                } else if (num1 == 3) {
+                    System.out.println("\n");
+                    lv4Menu.dessertsMenu();
+                    try {
+                        System.out.print("원하시는 메뉴를 선택해주세요: ");
+                        num2 = scanner.nextInt();
+                        if (num2 == 0) break;
+                        System.out.println("선택한 메뉴: " + lv4Menu.getDessertsMenu().get(num2 - 1));
+                        return;
+                    } catch (IndexOutOfBoundsException e) {
+                        System.out.println("올바른 숫자를 입력해주세요");
+                    }
                 }
-            } else if(num1 == 0) break;
+            }
         }
-
-
-
-
     }
 }
+

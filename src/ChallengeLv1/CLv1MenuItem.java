@@ -19,4 +19,12 @@ public class CLv1MenuItem {
     public String toString(){
         return name + " | " + "W" + price + " | " + foodDetails;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getPrice() {
+        return price;
+    }
 }

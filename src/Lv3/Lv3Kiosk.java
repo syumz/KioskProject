@@ -43,8 +43,6 @@ public class Lv3Kiosk { // 키오스크 프로그램의 메뉴를 관리하고 �
                 System.out.println(menuItems.get(2));
             } else if (num == 4) {
                 System.out.println(menuItems.get(3));
-            } else {
-                System.out.println("올바른 숫자를 입력해주세요.");
             }
         } while (num != 0);
         System.out.println("프로그램을 종료합니다."); // 0을 입력해 do-while 문을 빠져나왔을 때 실행

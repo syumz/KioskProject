@@ -10,6 +10,7 @@ public class CLv1Cart {
     // 1. 속성
     // 선택한 메뉴의 정보를 저장하는 리스트
     private final List<CLv1MenuItem> cartsList = new ArrayList<>();
+    Scanner scanner = new Scanner(System.in);
 
     // 2. 생성자
 
@@ -21,7 +22,6 @@ public class CLv1Cart {
         System.out.println("위 메뉴를 장바구니에 추가하시겠습니까?");
         System.out.println("1. 확인        2. 취소");
 
-        Scanner scanner = new Scanner(System.in);
         int cartNum = 0; // 장바구니에 추가 여부를 위한 변수 생성
         while(true){
             try{
@@ -63,7 +63,6 @@ public class CLv1Cart {
         double sumResult = 0; // 주문할 가격의 합을 나타내기 위한 변수 생성
 
         while (finalOrd != 1 && finalOrd != 2) { // 1또는 2를 입력하기 전까지 반복
-            Scanner scanner = new Scanner(System.in);
             System.out.println("\n" + "아래와 같이 주문 하시겠습니까?");
             System.out.println("[ Orders ]\n" + cartsList + "\n"); // 장바구니에 담겨 있는 메뉴를 보여준다.
 

@@ -6,6 +6,7 @@ import java.util.Scanner;
 public class CLv1Kiosk {
     CLv1Menu cLv1Menu;
     CLv1Cart cLv1Cart = new CLv1Cart();
+    Scanner scanner = new Scanner(System.in);
 
 
     // 2. 생성자
@@ -15,9 +16,6 @@ public class CLv1Kiosk {
 
     // 3. 기능(메서드)
     public void start() { // 입력과 반복문 로직
-
-        Scanner scanner = new Scanner(System.in);
-
         while (true) { // 사용자가 종료를 누르기 전까지 계속 반복
             int num1 = 0; // 메인메뉴 선택을 위한 변수 생성
             int num2 = 0; // 버거메뉴, 음료메뉴, 디저트 메뉴 선택을 위한 변수 생성

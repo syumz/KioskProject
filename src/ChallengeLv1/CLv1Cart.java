@@ -22,7 +22,7 @@ public class CLv1Cart {
 
         Scanner scanner = new Scanner(System.in);
         int cartNum = 0; // 장바구니에 추가 여부를 위한 변수 생성
-        while(cartNum != 1 && cartNum !=2) {
+        while (cartNum != 1 && cartNum != 2) {
             cartNum = scanner.nextInt();
             if (cartNum == 2) { // 2를 입력하면 장바구니에 추가하지 않기 때문에 cartsList 에 있는 마지막 값을 삭제한다.
                 cartsList.remove(cartsList.size() - 1);
@@ -50,7 +50,8 @@ public class CLv1Cart {
     public void orders() {
         int finalOrd = 0; // 최종으로 메뉴를 주문하기 위한 변수 생성
         double sumResult = 0; // 주문할 가격의 합을 나타내기 위한 변수 생성
-        while(finalOrd != 1 && finalOrd !=2) {
+
+        while (finalOrd != 1 && finalOrd != 2) { // 1또는 2를 입력하기 전까지 반복
             Scanner scanner = new Scanner(System.in);
             System.out.println("\n" + "아래와 같이 주문 하시겠습니까?");
             System.out.println("[ Orders ]\n" + cartsList + "\n"); // 장바구니에 담겨 있는 메뉴를 보여준다.
@@ -65,11 +66,14 @@ public class CLv1Cart {
 
             System.out.println("1. 주문      2. 메뉴판");
             finalOrd = scanner.nextInt(); // 최종으로 메뉴를 주문하기 위해 숫자를 입력 받는다.
-            if(finalOrd!=1 && finalOrd!=2){
+            try { // 1과 2 제외 다른 값이 입력됐을 경우 예외처리
+                if (finalOrd != 1 && finalOrd != 2) {
+                    throw new IllegalArgumentException();
+                }
+            } catch (IllegalArgumentException e) {
                 System.out.println("올바른 값을 입력해주세요");
             }
         }
-
         if (finalOrd == 1) {
             System.out.println("\n" + "주문이 완료되었습니다. 금액은 W " + sumResult + "입니다.");
             cartsList.clear();

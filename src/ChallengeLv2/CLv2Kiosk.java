@@ -52,7 +52,10 @@ public class CLv2Kiosk {
                 num1 = getInput(scanner, 0, 3); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
             }
 
-            if (num1 == 0) break; // 메인 메뉴에서 0을 눌렀을 시 프로그램 종료
+            if (num1 == 0) {
+                System.out.println("프로그램을 종료합니다.");
+                break; // 메인 메뉴에서 0을 눌렀을 시 프로그램 종료
+            }
 
             while (true) { // 사용자가 종료하기 전까지 반복한다.
                 System.out.println("\n");

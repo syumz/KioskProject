@@ -29,7 +29,10 @@ public class Lv4Kiosk {
                 System.out.print("원하시는 메뉴를 선택해주세요: ");
                 num1 = scanner.nextInt();
             }
-            if (num1 == 0) break; //종료
+            if (num1 == 0) {
+                System.out.println("프로그램을 종료합니다.");
+                break; //종료
+            }
 
             while (true) {
                 if (num1 == 1) {

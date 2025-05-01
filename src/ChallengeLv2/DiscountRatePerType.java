@@ -14,10 +14,12 @@ public enum DiscountRatePerType {
     private String name;
     private double per;
 
+    // Enum 에서 정의한 name 을 리스트로 저장
     static List<String> discountName = Stream.of(DiscountRatePerType.values())
             .map(DiscountRatePerType::getName)
             .collect(Collectors.toList());
 
+    // Enum 에서 정의한 per(할인율) 을 리스트로 저장
     static List<Double> discountPer = Stream.of(DiscountRatePerType.values())
             .map(DiscountRatePerType::getPer)
             .collect(Collectors.toList());
@@ -29,6 +31,7 @@ public enum DiscountRatePerType {
     }
 
     // 3. 기능(메서드)
+    // 할인정보를 출력하는 메서드
     public static void discountinfo() {
         System.out.println("\n할인 정보를 입력해주세요");
         for (int i = 0; i < discountName.size(); i++) {
@@ -37,10 +40,12 @@ public enum DiscountRatePerType {
         }
     }
 
+    // per 의 getter 메서드
     public double getPer() {
         return per;
     }
 
+    // name 의 getter 메서드
     public String getName() {
         return name;
     }

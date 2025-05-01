@@ -105,6 +105,7 @@ public class CLv2Cart {
             System.out.print("무슨 메뉴를 삭제하시겠습니까?: ");
             String menu = scanner.next();
 
+            //입력받은 menu 와 이름이 동일하다면 메뉴를 삭제
             cartsList.stream()
                     .filter(a -> a.getName().equals(menu))
                     .toList()

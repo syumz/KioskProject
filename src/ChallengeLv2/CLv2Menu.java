@@ -23,28 +23,28 @@ public class CLv2Menu {// MenuItem 클래스를 관리하는 클래스
     // 메인 메뉴를 보여주는 메서드
     public void mainMenu() {
         System.out.println("[ MAIN MENU ]");
-        cLv2Menus.forEach(a -> System.out.println(cLv2Menus.indexOf(a)+1 + ". " + a));
+        cLv2Menus.forEach(a -> System.out.println(cLv2Menus.indexOf(a) + 1 + ". " + a));
         System.out.println("0. 종료");
     }
 
     // 버거 메뉴를 보여주는 메서드
     public void burgersMenu() {
         System.out.println("[ BURGERS MENU ]");
-        burgersMenu.forEach(a -> System.out.println(burgersMenu.indexOf(a)+1 + ". " + a));
+        burgersMenu.forEach(a -> System.out.println(burgersMenu.indexOf(a) + 1 + ". " + a));
         System.out.println("0. 뒤로가기");
     }
 
     // 음료 메뉴를 보여주는 메서드
     public void drinkMenu() {
         System.out.println("[ DRINKS MENU ]");
-        drinksMenu.forEach(a -> System.out.println(drinksMenu.indexOf(a)+1 + ". " + a));
+        drinksMenu.forEach(a -> System.out.println(drinksMenu.indexOf(a) + 1 + ". " + a));
         System.out.println("0. 뒤로가기");
     }
 
     // 디저트 메뉴를 보여주는 메서드
     public void dessertsMenu() {
         System.out.println("[ DESSERTS MENU ]");
-        dessertsMenu.forEach(a -> System.out.println(dessertsMenu.indexOf(a)+1 + ". " + a));
+        dessertsMenu.forEach(a -> System.out.println(dessertsMenu.indexOf(a) + 1 + ". " + a));
         System.out.println("0. 뒤로가기");
     }
 

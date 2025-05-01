@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 
 public class CLv2Cart {
 
@@ -88,7 +87,7 @@ public class CLv2Cart {
         }
         if (finalOrd == 1) {
             int per = 0;
-            while(per<1 || per>4) {
+            while (per < 1 || per > 4) {
                 DiscountRatePerType.discountinfo();
                 per = getInput(scanner, 1, 4); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
             }
@@ -108,10 +107,8 @@ public class CLv2Cart {
 
             cartsList.stream()
                     .filter(a -> a.getName().equals(menu))
-                    .collect(Collectors.toList())
-                    .forEach(remove -> {
-                        cartsList.remove(remove);
-                    });
+                    .toList()
+                    .forEach(cartsList::remove);
             System.out.println("메뉴가 삭제되었습니다.");
 
         }

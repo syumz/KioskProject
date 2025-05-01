@@ -24,6 +24,7 @@ public class CLv1MenuItem {
     public String getName() {
         return name;
     }
+
     // price 의 getter 메서드
     public double getPrice() {
         return price;

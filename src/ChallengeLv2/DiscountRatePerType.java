@@ -23,17 +23,17 @@ public enum DiscountRatePerType {
             .collect(Collectors.toList());
 
     // 2. 생성자
-    DiscountRatePerType(String name, double per){
+    DiscountRatePerType(String name, double per) {
         this.name = name;
         this.per = per;
     }
 
     // 3. 기능(메서드)
-    public static void discountinfo(){
+    public static void discountinfo() {
         System.out.println("\n할인 정보를 입력해주세요");
         for (int i = 0; i < discountName.size(); i++) {
             System.out.print(i + 1 + ". ");
-            System.out.println(discountName.get(i) + ": "+ Math.round(discountPer.get(i)*100) + "%");
+            System.out.println(discountName.get(i) + ": " + Math.round(discountPer.get(i) * 100) + "%");
         }
     }
 

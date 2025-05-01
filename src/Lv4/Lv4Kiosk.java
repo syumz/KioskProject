@@ -23,7 +23,7 @@ public class Lv4Kiosk {
             lv4Menu.mainMenu();
             System.out.print("원하시는 메뉴를 선택해주세요: ");
             num1 = scanner.nextInt();
-            while (num1!= 0 && num1 != 1 && num1 != 2 && num1 != 3) {
+            while (num1 != 0 && num1 != 1 && num1 != 2 && num1 != 3) {
                 System.out.print("올바른 숫자를 입력해주세요.");
                 System.out.println("\n");
                 System.out.print("원하시는 메뉴를 선택해주세요: ");
@@ -40,7 +40,7 @@ public class Lv4Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + lv4Menu.getBurgersMenu().get(num2 - 1));
-                        return;
+
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }
@@ -53,7 +53,7 @@ public class Lv4Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + lv4Menu.getDrinksMenu().get(num2 - 1));
-                        return;
+
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }
@@ -66,7 +66,7 @@ public class Lv4Kiosk {
                         num2 = scanner.nextInt();
                         if (num2 == 0) break;
                         System.out.println("선택한 메뉴: " + lv4Menu.getDessertsMenu().get(num2 - 1));
-                        return;
+
                     } catch (IndexOutOfBoundsException e) {
                         System.out.println("올바른 숫자를 입력해주세요");
                     }

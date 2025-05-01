@@ -30,6 +30,7 @@ public class Lv2Main {
         int num; // 메뉴를 선택하기 위한 숫자 변수 생성
 
         do { // 0을 입력하기 전까지 원하는 메뉴 선택
+            System.out.println("\n");
             System.out.print("원하는 메뉴를 선택해주세요. (0을 입력하시면 종료됩니다.): ");
             num = scanner.nextInt();
             if (num == 1) {

@@ -23,10 +23,10 @@ public class CLv1Cart {
         System.out.println("1. 확인        2. 취소");
 
         int cartNum = 0; // 장바구니에 추가 여부를 위한 변수 생성
-        while(true){
-            try{
+        while (true) {
+            try {
                 cartNum = scanner.nextInt();
-                if(cartNum!=1 && cartNum!=2){
+                if (cartNum != 1 && cartNum != 2) {
                     throw new IllegalArgumentException();
                 }
             } catch (IllegalArgumentException | InputMismatchException e) {
@@ -34,10 +34,10 @@ public class CLv1Cart {
                 scanner.nextLine(); // 버퍼에 남아있는 값을 제거하기 위해 사용
             }
 
-            if(cartNum==1){ // 1을 입력하면 장바구니에 추가된 메뉴 이름을 출력한다.
+            if (cartNum == 1) { // 1을 입력하면 장바구니에 추가된 메뉴 이름을 출력한다.
                 System.out.println(cartsList.get(cartsList.size() - 1).getName() + " 이 장바구니에 추가되었습니다.");
                 break; // 바른 값을 입력했을 시 while 문에서 빠져나온다.
-            } else if(cartNum==2){ // 2를 입력하면 장바구니에 추가하지 않기 때문에 cartsList 에 있는 마지막 값을 삭제한다.
+            } else if (cartNum == 2) { // 2를 입력하면 장바구니에 추가하지 않기 때문에 cartsList 에 있는 마지막 값을 삭제한다.
                 cartsList.remove(cartsList.size() - 1);
                 System.out.println("메뉴 선택이 취소되었습니다.");
                 break; // 바른 값을 입력했을 시 while 문에서 빠져나온다.
@@ -78,7 +78,7 @@ public class CLv1Cart {
 
             try { // 1과 2 제외 다른 값이 입력됐을 경우 예외처리
                 finalOrd = scanner.nextInt(); // 최종으로 메뉴를 주문하기 위해 숫자를 입력 받는다.
-                if (finalOrd<1 || finalOrd >2) {
+                if (finalOrd < 1 || finalOrd > 2) {
                     throw new IllegalArgumentException();
                 }
             } catch (IllegalArgumentException | InputMismatchException e) {

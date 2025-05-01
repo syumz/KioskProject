@@ -17,17 +17,17 @@ public class CLv2Kiosk {
 
     // 3. 기능(메서드)
     // 메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드
-    public int getInput(Scanner scanner, int min, int max, String message){
+    public int getInput(Scanner scanner, int min, int max) {
         int input = -1;
-        while(true){
-            System.out.print(message);
-            try{
+        while (true) {
+            System.out.print("원하시는 메뉴를 선택해주세요: ");
+            try {
                 input = scanner.nextInt();
-                if(input < min || input > max){
+                if (input < min || input > max) {
                     throw new IllegalArgumentException();
                 }
                 break;
-            } catch(IllegalArgumentException | InputMismatchException e){
+            } catch (IllegalArgumentException | InputMismatchException e) {
                 System.out.println("올바른 숫자를 입력해주세요.");
                 scanner.nextLine();
             }
@@ -44,12 +44,12 @@ public class CLv2Kiosk {
             if (!cLv2Cart.getCarts().isEmpty()) { // 장바구니에 값이 들어있을 경우 0, 1, 2, 3, 4, 5 이외의 값 입력시 예외처리
                 System.out.println("\n");
                 cLv2Cart.orderMenu();
-                num1 = getInput(scanner,0, 5, "원하시는 메뉴를 선택해주세요: "); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
+                num1 = getInput(scanner, 0, 5); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
             }
 
             if (cLv2Cart.getCarts().isEmpty()) { // 장바구니가 비어있을 경우 0,1,2,3 이외의 값 입력시 예외처리
                 System.out.println("\n");
-                num1 = getInput(scanner,0, 3, "원하시는 메뉴를 선택해주세요: "); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
+                num1 = getInput(scanner, 0, 3); // 코드가 반복되는 부분을 getInput 메서드로 처리(메뉴 입력값을 받아 유효성 검사 후 반환하는 메서드)
             }
 
             if (num1 == 0) break; // 메인 메뉴에서 0을 눌렀을 시 프로그램 종료

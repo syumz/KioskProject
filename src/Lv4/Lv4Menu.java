@@ -12,15 +12,15 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
     private String name;
 
     // 2. 생성자
-    public Lv4Menu(){
+    public Lv4Menu() {
     }
 
-    public Lv4Menu(String name){
+    public Lv4Menu(String name) {
         this.name = name;
     }
 
     // 3. 기능(메서드)
-    public void burgersMenu(){
+    public void burgersMenu() {
         System.out.println("[ BURGERS MENU ]");
         for (int i = 0; i < burgersMenu.size(); i++) {
             System.out.print(i + 1 + ". ");
@@ -29,7 +29,7 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
         System.out.println("0. 뒤로가기");
     }
 
-    public void mainMenu(){
+    public void mainMenu() {
         System.out.println("[ MAIN MENU ]");
         for (int i = 0; i < lv4Menus.size(); i++) {
             System.out.print(i + 1 + ". ");
@@ -38,7 +38,7 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
         System.out.println("0. 종료");
     }
 
-    public void drinkMenu(){
+    public void drinkMenu() {
         System.out.println("[ DRINKS MENU ]");
         for (int i = 0; i < drinksMenu.size(); i++) {
             System.out.print(i + 1 + ". ");
@@ -47,7 +47,7 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
         System.out.println("0. 뒤로가기");
     }
 
-    public void dessertsMenu(){
+    public void dessertsMenu() {
         System.out.println("[ DESSERTS MENU ]");
         for (int i = 0; i < dessertsMenu.size(); i++) {
             System.out.print(i + 1 + ". ");
@@ -56,7 +56,7 @@ public class Lv4Menu {// MenuItem 클래스를 관리하는 클래스
         System.out.println("0. 뒤로가기");
     }
 
-    public String toString(){
+    public String toString() {
         return name;
     }
 

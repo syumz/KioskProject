@@ -11,15 +11,18 @@ public class Lv3Kiosk { // 키오스크 프로그램의 메뉴를 관리하고 �
     // 2. 생성자
 
     // 3. 기능(메서드)
-    public void start(){ // 입력과 반복문 로직
+    public void start() { // 입력과 반복문 로직
         Scanner scanner = new Scanner(System.in);
 
         System.out.print("햄버거 메뉴를 보시려면 'hamburger'를 입력해주세요. : ");
         String shakeshackMenu = scanner.nextLine();
-        if(!shakeshackMenu.equals("hamburger")){ // 다른 문자를 입력했을 시 다시 입력
-            System.out.println("다시 입력해주세요.");
-            System.out.print("햄버거 메뉴를 보시려면 'hamburger'를 입력해주세요. : ");
-            shakeshackMenu = scanner.nextLine();
+        if (!shakeshackMenu.equals("hamburger")) {// 다른 문자를 입력했을 시 다시 입력
+            while (true) {
+                System.out.println("다시 입력해주세요.");
+                System.out.print("햄버거 메뉴를 보시려면 'hamburger'를 입력해주세요. : ");
+                shakeshackMenu = scanner.nextLine();
+                if (shakeshackMenu.equals("hamburger")) break;
+            }
         }
 
         // 리스트에 들어가 있는 값을 for문을 통해 출력

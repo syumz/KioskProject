@@ -350,4 +350,15 @@ W 6.9
 프로그램을 종료합니다.
 ```
 
+---
+
+## 📌 TIL
+이 프로젝트를 진행하면서 배운 내용을 아래 벨로그에 정리하였습니다.
+- [Lv1 TIL 링크](https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Lv1)
+- [Lv2 TIL 링크](https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Lv2)
+- [Lv3 TIL 링크](https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Lv3)
+- [Lv4, Lv5 TIL 링크]((https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Lv4-Lv5))
+- [Challenge Lv1 TIL 링크](https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Challenge-LV1)
+- [Challenge Lv2 TIL 링크](https://velog.io/@syumz/%ED%82%A4%EC%98%A4%EC%8A%A4%ED%81%AC-%EB%A7%8C%EB%93%A4%EA%B8%B0-Challenge-Lv2)
+
 
